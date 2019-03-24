@@ -1,6 +1,6 @@
 FROM debian:stretch-slim 
 LABEL maintainer="knarfytrebil@gmail.com"
-LABEL description="Base System for Building Rust Programs"
+LABEL description="Base Image for Building Rust Programs"
 
 WORKDIR /root
 
@@ -9,6 +9,8 @@ RUN apt-get update && \
     apt-get install --no-install-recommends -y \
     ca-certificates curl file \
     build-essential \
+    git \
+    libclang-dev \
     autoconf automake autotools-dev libtool xutils-dev && \
     rm -rf /var/lib/apt/lists/*
 
