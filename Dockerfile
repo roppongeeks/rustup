@@ -11,6 +11,10 @@ RUN apt-get update && \
     build-essential \
     git \
     libclang-dev \
+    libssl-dev \
+    pkg-config \
+    cmake \
+    clang \
     autoconf automake autotools-dev libtool xutils-dev && \
     rm -rf /var/lib/apt/lists/*
 
